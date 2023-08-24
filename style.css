@@ -27,6 +27,9 @@ p{
 #bottom{
     margin-top: 50px;
 }
+#clearCookies{
+    margin-top: 10px;
+}
 .display{
     overflow:hidden;
 }

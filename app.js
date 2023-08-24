@@ -1,6 +1,6 @@
 function nameCheck(name) {
     for (let i = 0; i < allColors.length; i++){
-        if (name == allColors[i].toUpperCase() || name == allColors[i].toLowerCase()){
+        if (name.toUpperCase() == allColors[i].toUpperCase()){
             return false;
         }
     }
@@ -84,7 +84,20 @@ let createBtn = document.getElementById('createBtn');
 let allColors = ['yellowgreen','darkcyan','orangered'];
 let colError = document.getElementById('colError');
 let codeError = document.getElementById('codeError');
+let display = document.getElementById('display');
 
+let clearCookies = document.getElementById('clearCookies');
+clearCookies.onclick = function (){
+    localStorage.removeItem('myCookie');
+    localStorage.removeItem('myCookieAllColors');
+}
+
+if (localStorage.getItem('myCookie')){
+    display.innerHTML = JSON.parse(localStorage.getItem('myCookie'));
+}
+if (localStorage.getItem('myCookieAllColors')){
+    allColors = JSON.parse(localStorage.getItem('myCookieAllColors'));
+}
 
 createBtn.addEventListener('click', function (e) {
     colError.innerHTML = 'Color:'
@@ -109,7 +122,11 @@ createBtn.addEventListener('click', function (e) {
 
             let newColor = `<div class="colorBlock"><div style='min-width: 300px; max-width: 300px; min-height: 150px; max-height: 150px; margin: 6px; display: flex; justify-content: center; align-items: center;background-color: ${result[1]}; border: 35px solid ${result[0]};'>${name} <br> ${typeColor} <br>${result[2]}</div></div>`
             display.innerHTML += newColor
-            console.log(result)
+            let myCookie = document.getElementById('display').innerHTML;
+            localStorage.setItem('myCookie', JSON.stringify(myCookie));
+
+            let myCookieAllColors = allColors;
+            localStorage.setItem('myCookieAllColors', JSON.stringify(myCookieAllColors));
         }else{
             if (type == 1){
                 codeError.innerHTML = 'Color:     RGB code must match the pattern\n                [0-255], [0-255], [0-255]'
