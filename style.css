@@ -12,13 +12,13 @@
     justify-content: center;
 }
 select,input,button{
-    width: 175px;
+    width: 275px;
 }
 input,select{
     margin-bottom: 10px;
 }
 .form{
-    max-width: 200px;
+    max-width: 300px;
 }
 p{
     text-align: center;
@@ -48,10 +48,10 @@ p{
     border: 35px solid rgb(154,205,50);
 }
 #darkcyan{
-    background-color: rgb(50,189,189,1);
+    background-color: rgba(50,189,189,1);
     border: 35px solid rgba(0,139,139,1);
 }
 #orangered{
-    background-color: #ff9a67;
+    background-color: rgb(255,119,50);
     border: 35px solid #FF4500;
 }

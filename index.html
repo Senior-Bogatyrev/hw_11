@@ -11,17 +11,17 @@
         <div class="formAdd">
             <div class="form">
                 <p>Create new color</p>
-                <label for="color">Color:</label>
-                <input type="text" name="color">
+                <label for="color" id="colError">Color:</label>
+                <input type="text" name="color" id="name">
                 <label for="type">Type:</label>
                 <select name="type" id="type">
                     <option value="1">RGB</option>
                     <option value="2">RGBA</option>
                     <option value="3">HEX</option>
                 </select>
-                <label for="code">Code:</label>
-                <input type="text" name="code">
-                <button>Save</button>
+                <label for="code" id="codeError">Code:</label>
+                <input type="text" name="code" id="codecolor">
+                <button id="createBtn">Save</button>
             </div>
         </div>
         <div id="bottom">
@@ -55,5 +55,6 @@
     <script src="app.js"></script>
 </body>
 </html>
+
 
 
