@@ -7,6 +7,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="contain">
+        <div class="formAdd">
+            <div class="form">
+                <p>Create new color</p>
+                <label for="color">Color:</label>
+                <input type="text" name="color">
+                <label for="type">Type:</label>
+                <select name="type" id="type">
+                    <option value="1">RGB</option>
+                    <option value="2">RGBA</option>
+                    <option value="3">HEX</option>
+                </select>
+                <label for="code">Code:</label>
+                <input type="text" name="code">
+                <button>Save</button>
+            </div>
+        </div>
+        <div id="bottom">
+            <p>All colors</p>
+            <div id="display">
+                <div class="colorBlock">
+                    <div id="yellowgreen">
+                        YELLOWGREEN <br>
+                        RGB <br>
+                        154,205,50
+                    </div>     
+                </div>
+                <div class="colorBlock">
+                    <div id="darkcyan">
+                        DARKCYAN <br>
+                        RGBA <br>
+                        0, 139, 139, 1
+                    </div>
+                </div>
+                <div class="colorBlock">
+                    <div id="orangered">
+                        ORANGERED <br>
+                        HEX <br>
+                        #FF4500
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
+
+
